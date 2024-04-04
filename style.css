@@ -1,0 +1,232 @@
+:root{
+    --primary-color:#db3c3c;
+    --secondary-color:#a12323;
+    --bg-color:#130101;
+    --hover-color:white;
+}
+
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: 200ms;
+    text-decoration: unset;
+   
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;     
+    padding: 14px; 
+
+}
+
+a{
+    color: var(--primary-color);
+}
+
+p{
+    font-size: 1.05em;
+
+}
+
+.darkerText{
+    color:var(--secondary-color);
+}
+
+header,
+main,
+footer{
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:14px;
+}
+
+main,section, .nameContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    gap: 64px;
+    padding-bottom: 64px;
+}
+section{
+    gap: 32px
+}
+
+nav{
+    color: var(--primary-color);
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.chunkierText{
+    font-weight: 300;
+}
+
+nav a{
+    font-weight: 700;
+    cursor: pointer;
+}
+nav a:hover{
+    color:var(--hover-color);
+}
+.nameContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.imgContainer{
+    max-width: 114px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.imgContainer img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.statsContainer{
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    flex-direction: column;
+    
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats > div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap:24px;
+}
+.stats div i{
+    font-size: 1.4em;
+}
+
+.stats div div{
+    display:grid;
+    place-items: center;
+    min-width: 40px;
+}
+
+.aboutMe{
+    line-height: 1.5em; /*Line height modifies the height that separates different lines in a paragraph.*/
+}
+
+.outreach{
+    display: flex;
+    align-items: center;
+    gap:14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+}
+
+.outreach i{
+    transform: rotate(-45deg);
+}
+
+.outreach:hover{
+    color: var(--hover-color);
+}
+
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.headerText{
+    margin-bottom: 24px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.projectItem{
+    display: flex;
+    align-items: center;
+    gap:14px;   
+}
+
+.projectItem div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap:14px;
+    max-width: 56%;
+}
+
+.projectItem div:first-child p:first-child{
+    font-size: 1.5em;
+}
+
+.projectItem >div:last-child{
+    aspect-ratio: 16/9;
+    max-width: 40%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.projectItem >div:last-child img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.linkContainer{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.linkItem{
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    gap:14px
+}
+
+
+
+.linkItem:hover{
+    color:var(--hover-color);
+}
+
+
+@media (min-width: 640px){
+    .statsContainer{
+        flex-direction: row;
+    }
+    .stats{
+        gap: 0px;
+        
+    }
+    .aboutMe{
+        width: 80%;
+        margin-right: auto;
+    }
+}
