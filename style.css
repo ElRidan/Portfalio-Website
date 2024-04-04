@@ -3,6 +3,7 @@
     --secondary-color:#a12323;
     --bg-color:#130101;
     --hover-color:white;
+    --hover-secondary-color:#C39898;
 }
 
 *{  
@@ -182,6 +183,10 @@ nav a:hover{
 
 .projectItem div:first-child p:first-child{
     font-size: 1.5em;
+}
+
+.projectItem div:first-child p:first-child:hover{
+    color: var(--hover-secondary-color);
 }
 
 .projectItem >div:last-child{
