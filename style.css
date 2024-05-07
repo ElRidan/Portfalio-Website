@@ -1,7 +1,7 @@
 :root{
     --primary-color:#db3c3c;
     --secondary-color:#a12323;
-    --bg-color:#130101;
+    --bg-color:#000000;
     --hover-color:white;
     --hover-secondary-color:#C39898;
 }
@@ -11,9 +11,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    transition: 200ms;
+    transition: all 200ms;
     text-decoration: unset;
-   
+    transition-duration: 200ms;
 }
 
 body{
@@ -133,6 +133,9 @@ nav a:hover{
     place-items: center;
     min-width: 40px;
 }
+.stats > div:hover{
+    color: var(--hover-color);
+}
 
 .aboutMe{
     line-height: 1.5em; /*Line height modifies the height that separates different lines in a paragraph.*/
@@ -183,11 +186,19 @@ nav a:hover{
 
 .projectItem div:first-child p:first-child{
     font-size: 1.5em;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.projectItem div:first-child p:first-child i{
+    font-size: 1em;
 }
 
+
 .projectItem div:first-child p:first-child:hover{
-    color: var(--hover-secondary-color);
+    color: var(--hover-color);
 }
+
 
 .projectItem >div:last-child{
     aspect-ratio: 16/9;
